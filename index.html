@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>A Guide to Building Study Habits</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap">
+<style>
+:root{--bg:#fbfcff;--grid:#e1e8f8;--ink:#101a3a;--mut:#4c577a;--card:#fff;--line:#c9d3ef;--acc:#1b3fd8;--on:#fff;--hl:#ffe45c;--red:#e5484d;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1430;--grid:#19224f;--ink:#eaeeff;--mut:#a3aed6;--card:#141c42;--line:#2b3770;--acc:#8aa4ff;--on:#0e1430;--hl:#6b5a00;--red:#ff6b70;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0e1430;--grid:#19224f;--ink:#eaeeff;--mut:#a3aed6;--card:#141c42;--line:#2b3770;--acc:#8aa4ff;--on:#0e1430;--hl:#6b5a00;--red:#ff6b70;color-scheme:dark}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px)}
+@media(prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 "Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",sans-serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:11;background:var(--bg);border-bottom:1px solid var(--line)}
+nav{max-width:920px;margin:auto;display:flex;gap:2px;overflow-x:auto;padding:10px 16px}
+nav a{white-space:nowrap;padding:6px 12px;border-radius:6px;color:var(--mut);text-decoration:none;font-size:15px;font-weight:500}
+nav a:hover{background:var(--hl);color:var(--ink)}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+h1,h2,h3{line-height:1.12;margin:0;letter-spacing:-.02em}
+.hero{background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:28px 28px;border-bottom:1px solid var(--line)}
+.in{max-width:920px;margin:auto;padding:56px 20px 8px}
+.hero .in{padding:64px 20px 56px}
+h1{font-size:clamp(34px,7vw,60px);font-weight:800;max-width:15em}
+h2{font-size:clamp(26px,5vw,38px);font-weight:750;margin-bottom:10px}
+h3{font-size:20px;font-weight:700;margin-bottom:6px}
+.lead{color:var(--mut);max-width:60ch;margin:14px 0 0}
+section .in{border-left:3px solid var(--red);margin-left:max(0px,calc((100% - 920px)/2));padding-left:22px}
+p{margin:0 0 12px}
+.fill{margin-top:28px;background:var(--card);border:1px solid var(--line);border-radius:4px;padding:20px;font-size:clamp(18px,3.4vw,24px);line-height:2.1;box-shadow:6px 6px 0 var(--acc)}
+.fill input{font:inherit;color:var(--acc);font-weight:700;background:var(--hl);border:0;border-bottom:2px solid var(--acc);padding:0 6px;width:10ch;max-width:100%;border-radius:0}
+.fill input[type=number]{width:5ch}
+.fill small{display:block;font-size:15px;line-height:1.5;color:var(--mut);margin-top:10px}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-top:22px}
+.card{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--acc);border-radius:2px 2px 12px 12px;padding:16px 18px}
+.card p{color:var(--mut);font-size:15.5px;margin:0}
+.card b{color:var(--ink)}
+.note{background:var(--hl);color:var(--ink);padding:14px 16px;border-radius:4px;margin-top:22px;font-size:15.5px}
+:root[data-theme="dark"] .note{color:#fff}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .note{color:#fff}}
+.steps{counter-reset:s;list-style:none;padding:0;margin:24px 0 0}
+.steps li{counter-increment:s;display:grid;grid-template-columns:48px 1fr;gap:14px;padding:16px 0;border-top:1px solid var(--line)}
+.steps li::before{content:counter(s);font-size:44px;font-weight:800;color:var(--acc);line-height:1}
+.steps b{display:block;font-size:19px;margin-bottom:2px}
+.steps span{color:var(--mut);font-size:16px}
+.two{display:grid;gap:8px 28px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-top:20px;padding:0;list-style:none}
+.two li{padding:10px 0;border-bottom:1px dashed var(--line);color:var(--mut);font-size:16px}
+.two b{color:var(--ink)}
+.scroll{overflow-x:auto;margin-top:20px;border:1px solid var(--line)}
+table{border-collapse:collapse;width:100%;min-width:560px;background:var(--card)}
+th,td{padding:10px 14px;text-align:left;font-size:15.5px;border-bottom:1px solid var(--line)}
+th{background:var(--acc);color:var(--on);font-weight:600}
+dl{margin:20px 0 0}
+dt{font-weight:700;font-size:18px;padding-top:14px;border-top:1px solid var(--line)}
+dd{margin:2px 0 14px;color:var(--mut);font-size:16px}
+.days{display:grid;grid-template-columns:repeat(auto-fill,minmax(50px,1fr));gap:8px;margin:16px 0 8px}
+.days button{aspect-ratio:1;border-radius:6px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);font:600 16px inherit;font-family:inherit;cursor:pointer}
+.days button.on{background:var(--acc);color:var(--on);border-color:var(--acc)}
+.cnt{font-weight:700;color:var(--acc)}
+footer{max-width:920px;margin:48px auto 0;padding:24px 20px 40px;border-top:1px solid var(--line);color:var(--mut);font-size:15px}
+</style>
+</head>
+<body>
+<header><nav>
+<a href="#basics">Basics</a><a href="#steps">7 steps</a><a href="#techniques">Study techniques</a><a href="#body">Body and space</a><a href="#schedule">Sample schedule</a><a href="#mistakes">Common mistakes</a><a href="#tracker">30-day tracker</a>
+</nav></header>
+
+<div class="hero"><div class="in">
+<h1>Build a study habit with a small system you repeat</h1>
+<p class="lead">A step-by-step guide from zero: how to start, study techniques that work, a sample schedule, and a 30-day tracker. No need to wait for motivation.</p>
+<div class="fill">
+After <input id="a" value="breakfast" aria-label="Trigger activity"> I will study for <input id="b" type="number" value="25" min="5" max="180" aria-label="Minutes of study"> minutes at <input id="c" value="my desk" aria-label="Study place">.
+<small>This is the starting sentence for your habit. Change the blanks to fit your routine, then write it where you will see it often.</small>
+</div>
+</div></div>
+
+<section id="basics"><div class="in">
+<h2>The basics: habits run without waiting for a mood</h2>
+<p class="lead">Motivation rises and falls. A habit runs automatically because your brain already knows the pattern. Every habit has three parts:</p>
+<div class="grid">
+<div class="card"><h3>Cue</h3><p>The signal that starts the habit: a certain time, a certain place, or a previous activity. Example: <b>after dinner</b>.</p></div>
+<div class="card"><h3>Routine</h3><p>A small, specific study action. Example: <b>solve 5 math problems</b>, not “study math”.</p></div>
+<div class="card"><h3>Reward</h3><p>An immediate sense of satisfaction afterward: ticking the tracker, taking a break, or a favorite snack.</p></div>
+</div>
+<p class="note">Lally et al. (2009) found that a new habit takes about 66 days on average, with a very wide range (18 to 254 days). Missing one day does not ruin the process. What matters is coming back tomorrow.</p>
+</div></section>
+
+<section id="steps"><div class="in">
+<h2>7 steps to build a study habit</h2>
+<p class="lead">Follow them in order. Finish one step before moving on to the next.</p>
+<ol class="steps">
+<li><div><b>Set a clear goal</b><span>Write a goal that is specific and has a deadline. Example: “Raise my Physics grade from 70 to 80 by the end-of-term exam.” A clear goal tells you what to study.</span></div></li>
+<li><div><b>Start very small</b><span>Aim for 10 to 15 minutes a day at first. The point is to build the pattern, not to cover a lot of material. Add time once the pattern is in place.</span></div></li>
+<li><div><b>Set a cue: a fixed time and place</b><span>Use the formula “After [activity], I will [study] for [duration] at [place].” A new habit attached to an existing routine is much easier to remember.</span></div></li>
+<li><div><b>Prepare your environment</b><span>Set out your books and stationery before it is time. Keep your phone away. The fewer obstacles to starting, the more likely you actually start.</span></div></li>
+<li><div><b>Choose effective study techniques</b><span>Replace simple rereading with active recall, spaced repetition, or the Feynman method (see the techniques section below).</span></div></li>
+<li><div><b>Track and reward</b><span>Tick every day you finish on the tracker. A growing chain of ticks is a visible reward. Give yourself a small treat at the end of the week.</span></div></li>
+<li><div><b>Review weekly and adjust</b><span>Each weekend, answer three questions: what worked, what got in the way, and what to change next week. Adjust the schedule instead of blaming yourself.</span></div></li>
+</ol>
+</div></section>
+
+<section id="techniques"><div class="in">
+<h2>Study techniques that work</h2>
+<p class="lead">A habit decides when you study. A technique decides how much sinks in.</p>
+<div class="grid">
+<div class="card"><h3>Pomodoro</h3><p>Study with full focus for 25 minutes, then rest for 5. After 4 rounds, take a 15 to 30 minute break. Good for fighting the urge to procrastinate.</p></div>
+<div class="card"><h3>Active recall</h3><p>Close the book, then try to remember and write down the material or answer questions. The feeling that “this is hard to remember” is a sign your brain is getting stronger.</p></div>
+<div class="card"><h3>Spaced repetition</h3><p>Review material with gaps that keep widening: day 1, 3, 7, 14, then 30. It lasts longer than cramming the night before.</p></div>
+<div class="card"><h3>Feynman method</h3><p>Explain the material in simple words, as if teaching a friend. The parts where you stumble are the parts you have not understood yet.</p></div>
+</div>
+</div></section>
+
+<section id="body"><div class="in">
+<h2>Body and study space</h2>
+<p class="lead">A habit is hard to keep when your body is tired and your room is full of distractions.</p>
+<ul class="two">
+<li><b>Get enough sleep.</b> About 7 to 9 hours for most young adults. Memory is strengthened during sleep.</li>
+<li><b>Keep your phone out of reach.</b> Put it in another room or on airplane mode during study sessions.</li>
+<li><b>Keep your desk minimal.</b> Only what you use today. A tidy desk leaves fewer excuses to put things off.</li>
+<li><b>Move for 5 minutes.</b> Standing and stretching between sessions keeps your focus fresh.</li>
+<li><b>Drink water and eat regularly.</b> An empty stomach and dehydration lower concentration.</li>
+<li><b>One place, one purpose.</b> Study in the same spot so your brain switches into study mode right away.</li>
+</ul>
+</div></section>
+
+<section id="schedule"><div class="in">
+<h2>Sample weekly schedule</h2>
+<p class="lead">One block = 25 minutes of focus. Adjust the subjects and the number of blocks to your situation.</p>
+<div class="scroll"><table>
+<tr><th>Day</th><th>Focus</th><th>Duration</th><th>Technique</th></tr>
+<tr><td>Monday</td><td>New material, subject 1</td><td>2 blocks</td><td>Active recall</td></tr>
+<tr><td>Tuesday</td><td>New material, subject 2</td><td>2 blocks</td><td>Feynman method</td></tr>
+<tr><td>Wednesday</td><td>Practice problems</td><td>3 blocks</td><td>Pomodoro</td></tr>
+<tr><td>Thursday</td><td>New material, subject 3</td><td>2 blocks</td><td>Active recall</td></tr>
+<tr><td>Friday</td><td>Review this week’s material</td><td>2 blocks</td><td>Spaced repetition</td></tr>
+<tr><td>Saturday</td><td>Mixed problems and tidy notes</td><td>3 blocks</td><td>Pomodoro</td></tr>
+<tr><td>Sunday</td><td>Weekly review and next week’s plan</td><td>20 minutes</td><td>Reflection</td></tr>
+</table></div>
+</div></section>
+
+<section id="mistakes"><div class="in">
+<h2>Common mistakes and how to fix them</h2>
+<dl>
+<dt>Waiting for mood or motivation</dt><dd>Use a cue and a 10-minute target. Mood usually shows up after you start, not before.</dd>
+<dt>Setting targets that are too big at the start</dt><dd>Begin with a duration that feels almost too easy. Add a little each week.</dd>
+<dt>Only rereading and highlighting</dt><dd>Test yourself instead: close your notes, then answer questions from memory.</dd>
+<dt>Cramming the night before an exam</dt><dd>Spread short sessions over many days. Material reviewed with gaps lasts longer.</dd>
+<dt>Multitasking with your phone</dt><dd>One session, one task. Keep notifications off until the block ends.</dd>
+<dt>Quitting completely after missing a day</dt><dd>The rule: never miss twice in a row. One missed day is normal, so pick it up again tomorrow.</dd>
+</dl>
+</div></section>
+
+<section id="tracker"><div class="in">
+<h2>30-day plan and tracker</h2>
+<ul class="two">
+<li><b>Week 1, foundation.</b> 10 to 15 minutes a day. Focus on the cue and a fixed place.</li>
+<li><b>Week 2, extend.</b> Move up to 25 to 45 minutes. Start using Pomodoro.</li>
+<li><b>Week 3, strengthen.</b> Apply active recall and spaced repetition to real material.</li>
+<li><b>Week 4, lock it in.</b> Review, tidy your schedule, and set next month’s goal.</li>
+</ul>
+<p style="margin-top:20px">Tap a number to mark a day you studied. Done: <span class="cnt" id="cnt">0</span> of 30 days.</p>
+<div class="days" id="days"></div>
+</div></section>
+
+<footer>Consistency matters more than perfection. Start small today, repeat tomorrow.</footer>
+
+<script>
+const K="habit30",el=document.getElementById("days"),out=document.getElementById("cnt");
+let s=[];
+try{s=JSON.parse(localStorage.getItem(K)||"[]")}catch(e){}
+if(!Array.isArray(s))s=[];
+function draw(){
+el.innerHTML="";
+for(let i=1;i<=30;i++){
+const b=document.createElement("button"),on=s.includes(i);
+b.textContent=i;b.className=on?"on":"";b.setAttribute("aria-pressed",on);b.setAttribute("aria-label","Day "+i);
+b.onclick=()=>{s=s.includes(i)?s.filter(x=>x!==i):s.concat(i);try{localStorage.setItem(K,JSON.stringify(s))}catch(e){}draw()};
+el.appendChild(b)}
+out.textContent=s.length}
+draw();
+</script>
+</body>
+</html>
